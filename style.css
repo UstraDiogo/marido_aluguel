@@ -1,0 +1,213 @@
+html{
+    margin: 0%;
+    background-color: rgb(81, 81, 81);
+}
+
+body{
+    margin: 0% ;
+    border: solid 2px rgb(81, 81, 81);
+    border-radius: 1rem;
+    background-color: rgb(81, 81, 81);
+    font-family: 'Montserrat';
+    font-size: 100%;
+}
+
+header img{
+    max-width: 98%;
+    margin: 1% 1% 0% 1% ;
+    border-radius: 20px 20px 0 0;
+}
+
+.menu_botoes{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: black;
+    padding-top: 5%;
+    margin: -1% 1% 1% 1%;
+    position: relative;
+    border-radius: 0 0 20px 20px;
+
+}
+
+.menu_botoes .CNPJ{
+    color: whitesmoke;
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+
+.menu_botoes ol{
+    padding: 0;
+}
+
+.menu_botoes ol a{
+    color: #7ed957;    
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.conteudo{
+    margin: 1%;
+    background-color: rgb(57, 57, 57);
+    border-radius: 20px 20px;
+    padding: 5%;
+}
+
+.conteudo img{
+    max-width: 60px;
+}
+
+.conteudo div{
+    margin: 5% 0 5% 0;
+    color: whitesmoke;
+}
+
+.conteudo_sobre, .conteudo_contato, .conteudo_servicos{
+    margin-bottom: 10%;
+    
+}
+
+section h1{
+    font-family: 'Montserrat'; font-size: 1.2rem;
+    color: whitesmoke;
+    padding-bottom: 10px;
+    border-bottom: solid 1px rgb(81, 81, 81);
+    position: relative;
+
+}
+
+.servicos, .contato{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    gap: 5%;
+    
+}
+
+.servicos ol, .contato ol{
+    border: solid 1px rgb(81, 81, 81);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+.servicos ol img, .contato ol img{
+    margin-top: 10%;
+    max-width: 50px;
+}
+
+.botao_whatsapp{
+
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0.5rem;
+    background-color: #075e54;
+    border-radius: 20px;
+    size: 10%;
+
+}
+.botao_instagram img{
+    max-height: 6%;
+    
+}
+
+.botao_instagram{
+
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 0.5rem;
+    background-color: #640c58;
+    border-radius: 20px;
+    size: 10%;
+
+}
+.botao_whatsapp img{
+    max-height: 6%;
+}
+
+.menu_botoes ol a:hover{
+    color: whitesmoke;
+}
+
+.conteudo_sobre h1::before{
+    content:"";
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    width: 7%;
+    background: #7ed957;
+    border-radius: 50px;
+    transition: 0.3s;
+    transform: scaleX(0);
+    
+}
+
+.conteudo_servicos h1::before{
+    content:"";
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    width: 9.5%;
+    background: #7ed957;
+    border-radius: 50px;
+    transition: 0.3s;
+    transform: scaleX(0);
+    
+}
+
+
+.conteudo_contato h1::before{
+    content:"";
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    width: 9.5%;
+    background: #7ed957;
+    border-radius: 50px;
+    transition: 0.3s;
+    transform: scaleX(0);
+    
+}
+
+.conteudo_avaliacoes h1::before{
+    content:"";
+    position: absolute;
+    bottom: -2px;
+    height: 6px;
+    width: 12%;
+    background: #7ed957;
+    border-radius: 50px;
+    transition: 0.3s;
+    transform: scaleX(0);
+    
+}
+
+section h1:hover::before{
+    transform: scale(1) ;
+}
+
+@media (max-width: 1000px){
+    .servicos, .contato{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        gap: 5%;
+        margin-bottom: 10%;
+    }
+    .conteudo_sobre, .conteudo_contato, .conteudo_servicos{
+        margin-bottom: 15%;
+        
+    }
+}
+
+@media (max-width: 650px){
+    .servicos, .contato{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        gap: 5%;
+        margin-bottom: 10%;
+    }
+    .conteudo_contato{
+        margin-top: 110%;
+        
+    }
+}
