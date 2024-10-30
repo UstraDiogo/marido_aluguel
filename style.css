@@ -10,6 +10,7 @@ body{
     background-color: rgb(81, 81, 81);
     font-family: 'Montserrat';
     font-size: 100%;
+    
 }
 
 header img{
@@ -23,7 +24,7 @@ header img{
     justify-content: space-evenly;
     background-color: black;
     padding-top: 5%;
-    margin: -1% 1% 1% 1%;
+    margin: -1.5% 1% 1% 1%;
     position: relative;
     border-radius: 0 0 20px 20px;
 
@@ -51,6 +52,8 @@ header img{
     background-color: rgb(57, 57, 57);
     border-radius: 20px 20px;
     padding: 5%;
+    display: grid;
+    grid-column: 1fr;
 }
 
 .conteudo img{
@@ -95,7 +98,7 @@ section h1{
 }
 
 .botao_whatsapp{
-
+    align-items: center;
     text-decoration: none;
     color: whitesmoke;
     padding: 0.5rem;
@@ -110,7 +113,7 @@ section h1{
 }
 
 .botao_instagram{
-
+    align-items: center;
     text-decoration: none;
     color: whitesmoke;
     padding: 0.5rem;
@@ -190,24 +193,27 @@ section h1:hover::before{
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
         gap: 5%;
-        margin-bottom: 10%;
-    }
-    .conteudo_sobre, .conteudo_contato, .conteudo_servicos{
-        margin-bottom: 15%;
         
     }
+   
 }
 
 @media (max-width: 650px){
-    .servicos, .contato{
+    .servicos, .contato, .conteudo_contato{
         display: grid;
         grid-template-columns: 1fr;
-        margin: 0 auto;
+        margin: 0;
         gap: 5%;
         margin-bottom: 10%;
+        display: inline;
     }
-    .conteudo_contato{
-        margin-top: 110%;
-        
+
+   
+    .contato ol a img{
+        max-width: 15px;
     }
+    
+
+    
+    
 }
