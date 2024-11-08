@@ -1,25 +1,25 @@
-html{
+html {
     margin: 0%;
     background-color: rgb(81, 81, 81);
 }
 
-body{
-    margin: 0% ;
+body {
+    margin: 0%;
     border: solid 2px rgb(81, 81, 81);
     border-radius: 1rem;
     background-color: rgb(81, 81, 81);
     font-family: 'Montserrat';
     font-size: 100%;
-    
+
 }
 
-header img{
+header img {
     max-width: 98%;
-    margin: 1% 1% 0% 1% ;
+    margin: 1% 1% 0% 1%;
     border-radius: 20px 20px 0 0;
 }
 
-.menu_botoes{
+.menu_botoes {
     display: flex;
     justify-content: space-evenly;
     background-color: black;
@@ -30,24 +30,24 @@ header img{
 
 }
 
-.menu_botoes .CNPJ{
+.menu_botoes .CNPJ {
     color: whitesmoke;
     position: absolute;
     top: 1%;
     right: 5%;
 }
 
-.menu_botoes ol{
+.menu_botoes ol {
     padding: 0;
 }
 
-.menu_botoes ol a{
-    color: #7ed957;    
+.menu_botoes ol a {
+    color: #7ed957;
     text-decoration: none;
     font-weight: 900;
 }
 
-.conteudo{
+.conteudo {
     margin: 1%;
     background-color: rgb(57, 57, 57);
     border-radius: 20px 20px;
@@ -56,22 +56,24 @@ header img{
     grid-column: 1fr;
 }
 
-.conteudo img{
+.conteudo img {
     max-width: 60px;
 }
 
-.conteudo div{
+.conteudo div {
     margin: 5% 0 5% 0;
     color: whitesmoke;
 }
 
-.conteudo_sobre, .conteudo_contato, .conteudo_servicos{
+.conteudo_sobre,
+.conteudo_servicos {
     margin-bottom: 10%;
-    
+
 }
 
-section h1{
-    font-family: 'Montserrat'; font-size: 1.2rem;
+section h1 {
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
     color: whitesmoke;
     padding-bottom: 10px;
     border-bottom: solid 1px rgb(81, 81, 81);
@@ -79,25 +81,42 @@ section h1{
 
 }
 
-.servicos, .contato{
+.servicos,
+.contato {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 auto;
     gap: 5%;
-    
+
 }
 
-.servicos ol, .contato ol{
+.servicos ol,
+.contato ol {
     border: solid 1px rgb(81, 81, 81);
     border-radius: 10px;
     padding: 10px 10px;
 }
-.servicos ol img, .contato ol img{
+
+.servicos ol:hover,
+.contato ol:hover{
+    border: solid 1px rgba(245, 245, 245, 0.333);
+}
+
+.servicos ol img,
+.contato ol img {
     margin-top: 10%;
     max-width: 50px;
 }
 
-.botao_whatsapp{
+.servicos ol img:hover,
+.contato ol img:hover{
+    -webkit-transform: scale(1.2);
+    transition: 0.3s;
+    
+    transform: rotate(360deg);
+}
+
+.botao_whatsapp {
     align-items: center;
     text-decoration: none;
     color: whitesmoke;
@@ -107,12 +126,13 @@ section h1{
     size: 10%;
 
 }
-.botao_instagram img{
+
+.botao_instagram img {
     max-height: 6%;
-    
+
 }
 
-.botao_instagram{
+.botao_instagram {
     align-items: center;
     text-decoration: none;
     color: whitesmoke;
@@ -122,84 +142,131 @@ section h1{
     size: 10%;
 
 }
-.botao_whatsapp img{
-    max-height: 6%;
+.botao_instagram:hover{
+    background-color: #8b117b;
 }
 
-.menu_botoes ol a:hover{
+.botao_whatsapp img {
+    max-height: 6%;
+}
+.botao_whatsapp:hover{
+    background-color: #0da08f;
+}
+
+.menu_botoes ol a:hover {
     color: whitesmoke;
 }
 
-.conteudo_sobre h1::before{
-    content:"";
+
+.conteudo_sobre h1::before, .conteudo_servicos h1::before, .conteudo_contato h1::before, .conteudo_avaliacoes h1::before {
+    content: "";
     position: absolute;
     bottom: -2px;
-    height: 6px;
-    width: 7%;
+    height: 3px;
+    width: 100%;
     background: #7ed957;
     border-radius: 50px;
-    transition: 0.3s;
+    transition: 1s;
     transform: scaleX(0);
-    
+    background-image: linear-gradient(45deg, #7ed957, #519135);
+
 }
 
-.conteudo_servicos h1::before{
-    content:"";
-    position: absolute;
-    bottom: -2px;
-    height: 6px;
-    width: 9.5%;
-    background: #7ed957;
-    border-radius: 50px;
-    transition: 0.3s;
-    transform: scaleX(0);
-    
+section h1:hover::before {
+    transform: scale(1);
 }
 
-
-.conteudo_contato h1::before{
-    content:"";
-    position: absolute;
-    bottom: -2px;
-    height: 6px;
-    width: 9.5%;
-    background: #7ed957;
-    border-radius: 50px;
-    transition: 0.3s;
-    transform: scaleX(0);
-    
+.buttonAvaliar{
+    background-color: #7ed957;
+    border: none;
+    padding: 1.5%;
+    width: auto;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 80%;
+    cursor: pointer;
+    outline: none;
 }
 
-.conteudo_avaliacoes h1::before{
-    content:"";
-    position: absolute;
-    bottom: -2px;
-    height: 6px;
-    width: 12%;
-    background: #7ed957;
-    border-radius: 50px;
-    transition: 0.3s;
-    transform: scaleX(0);
-    
+.buttonAvaliar:hover{
+    background-color: #89ed5e;
 }
 
-section h1:hover::before{
-    transform: scale(1) ;
+dialog::backdrop {
+    background-color: rgb(0 0 0 /.5);
+
 }
 
-@media (max-width: 1000px){
-    .servicos, .contato{
+dialog {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 1em rgb(0 0 0 /.3);
+    width: 90%;
+    height: 60%;
+    text-align: center;
+}
+
+.dialogAvaliacao{
+    width: 90%;
+    height: 70%;
+    text-align: center;
+}
+
+.dialogAvaliacao textarea {
+    width: 90%;
+    height: 70%;
+
+}
+
+.avaliacao{
+    display: flex;
+   }
+  .star-icon{
+    list-style-type: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;/* alterar o tamanho das estrelas */
+  }
+  .star-icon::before{
+    content: "\2605";
+  }
+  .star-icon.ativo ~ .star-icon::before{
+    content: "\2606";
+  }
+  .avaliacao:hover .star-icon::before{
+    content: "\2605";
+  }
+  .star-icon:hover ~ .star-icon::before{
+    content: "\2606";
+  }
+
+@media (max-width: 1000px) {
+
+    .servicos,
+    .contato {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: 0 auto;
         gap: 5%;
-        
+
     }
+
+    dialog{
+        width: 80%;
+        height: 80%;
+        gap: 15%;
+    }
+
    
+
 }
 
-@media (max-width: 650px){
-    .servicos, .contato, .conteudo_contato{
+@media (max-width: 685px) {
+
+    .servicos,
+    .contato,
+    .conteudo_contato {
         display: grid;
         grid-template-columns: 1fr;
         margin: 0;
@@ -208,12 +275,16 @@ section h1:hover::before{
         display: inline;
     }
 
-   
-    .contato ol a img{
+
+    .contato ol a img {
         max-width: 15px;
     }
-    
 
-    
-    
+    .dialogAvaliacao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2%;
+    }
+
 }
